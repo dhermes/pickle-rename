@@ -80,3 +80,11 @@ def renamed_load(file_obj):
 ```
 
 and using `renamed_load` instead of `pickle.load`.
+
+## References
+
+- [Python pickling after changing a module's directory][1]
+- [`find_class()`][2]
+
+[1]: https://stackoverflow.com/q/2121874/1068170
+[2]: https://docs.python.org/3/library/pickle.html#pickle.Unpickler.find_class
