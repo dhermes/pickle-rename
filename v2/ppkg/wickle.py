@@ -25,7 +25,9 @@ class A:
     def __new__(cls, *args, **kwargs):
         msg = _pretty_after(args, kwargs)
         print("v2: __new__({}{})".format(cls.__name__, msg))
-        return super(A, cls).__new__(cls)
+        result = super(A, cls).__new__(cls)
+        print("    --> {}".format(result))
+        return result
 
     def __getnewargs__(self, *args, **kwargs):
         template = "v2: __getnewargs__({}{})"

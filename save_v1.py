@@ -1,12 +1,3 @@
-"""Example output:
-
-$ python save_v1.py
-v1: __new__(A, 11.0, 12.5)
-v1: __init__(<ppkg.wickle.A object at 0x7f38552eba58>, 11.0, 12.5)
-v1: __getnewargs__(<ppkg.wickle.A object at 0x7f38552eba58>)
-v1: __getstate__(<ppkg.wickle.A object at 0x7f38552eba58>)
-"""
-
 import pickle
 import sys
 

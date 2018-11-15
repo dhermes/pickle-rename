@@ -24,17 +24,23 @@ class A:
     def __new__(cls, *args, **kwargs):
         msg = _pretty_after(args, kwargs)
         print("v1: __new__({}{})".format(cls.__name__, msg))
-        return super(A, cls).__new__(cls)
+        result = super(A, cls).__new__(cls)
+        print("      -> {}".format(result))
+        return result
 
     def __getnewargs__(self, *args, **kwargs):
         template = "v1: __getnewargs__({}{})"
         print(template.format(self, _pretty_after(args, kwargs)))
-        return self.x, self.y
+        result = self.x, self.y
+        print("      -> {}".format(result))
+        return result
 
     def __getstate__(self, *args, **kwargs):
         template = "v1: __getstate__({}{})"
         print(template.format(self, _pretty_after(args, kwargs)))
-        return {"x": self.x, "y": self.y}
+        result = {"x": self.x, "y": self.y}
+        print("      -> {}".format(result))
+        return result
 
     def __setstate__(self, state):
         template = "v1: __setstate__({}, state={!r})"

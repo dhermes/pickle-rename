@@ -1,13 +1,3 @@
-"""Example output:
-
-$ python load_v3.py
-v3: __new__(A, 11.0, 12.5)
-v3: __setstate__(<p2pkg.tickle.A object at 0x7f6ed12b5080>, state={'x': 11.0, 'y': 12.5})
-============================================================
-<p2pkg.tickle.A object at 0x7f6ed12b5080>
-{'x': 11.0, 'y': 12.5, 'z': 10}
-"""
-
 import pickle
 import sys
 
@@ -35,8 +25,8 @@ def main():
         a = renamed_load(file_obj)
 
     print("=" * 60)
-    print(a)
-    print(a.__dict__)
+    print("a = {}".format(a))
+    print("a.__dict__ = {}".format(a.__dict__))
 
 
 if __name__ == "__main__":
